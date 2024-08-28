@@ -1,0 +1,238 @@
+@import "../common.css";
+
+.start-container {
+  background-image: url("../../assets/img/wide_profile_pic.JPG");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  flex: 1;
+  width: 100%;
+  height: 96vh;
+  position: static;
+  cursor: default;
+
+  .container-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 96vh;
+    background: rgba(0, 0, 0, 0.55);
+    pointer-events: none;
+  }
+
+  .sc-left {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    top: 36vh;
+    left: 4em;
+    color: var(--white);
+
+    .left-name-title {
+      font-size: 50px;
+      font-weight: 700;
+
+      span {
+        &:first-child {
+          color: var(--name-text);
+          background-color: var(--theme-color);
+        }
+        &:last-child {
+          color: var(--name-text);
+        }
+      }
+    }
+
+    .left-name-description {
+      margin-top: 4px;
+      font-size: 30px;
+      font-weight: 500;
+
+      span {
+        font-family: "Source Code Pro", monospace;
+        margin-left: 2px;
+      }
+    }
+  }
+}
+
+.about-me {
+  display: flex;
+  background-color: var(--about-me-background);
+  color: var(--about-me-text);
+  height: 70vh;
+  padding: 90px 50px;
+
+  .about-heading {
+    font-family: "Oxygen", sans-serif;
+    width: 40%;
+    padding-top: 4.5%;
+    color: var(--subsection-title);
+    font-weight: bold;
+    font-size: 46px;
+    border-bottom: 4px solid var(--subsection-title);
+  }
+
+  .about-text {
+    margin-left: 4%;
+    border-top: 4px solid var(--subsection-title);
+    width: 50%;
+    padding-top: 3%;
+    font-weight: 400;
+    font-size: 22px;
+
+    p {
+      text-align: justify;
+    }
+  }
+}
+
+.skills {
+  display: flex;
+  justify-content: space-between;
+  background-color: #ffd7c4;
+  color: var(--about-me-background);
+  height: 70vh;
+  padding: 90px 50px;
+
+  .skills-content {
+    width: 50%;
+    padding-top: 3%;
+    font-weight: 400;
+    font-size: 22px;
+    border-bottom: 4px solid var(--about-me-background);
+
+    ul li {
+      margin-top: 0.4em;
+    }
+  }
+
+  .skills-heading {
+    font-family: "Oxygen", sans-serif;
+    text-align: end;
+    width: 40%;
+    margin-left: 4.5%;
+    padding-top: 3%;
+    font-weight: bold;
+    font-size: 46px;
+    border-top: 4px solid var(--about-me-background);
+  }
+}
+
+.contact-me {
+  display: flex;
+  background-color: var(--about-me-background);
+  color: var(--about-me-text);
+  height: 70vh;
+  padding: 90px 50px;
+
+  .contact-title {
+    font-family: "Oxygen", sans-serif;
+    width: 40%;
+    padding-top: 4.5%;
+    color: var(--subsection-title);
+    font-weight: bold;
+    font-size: 46px;
+    border-bottom: 4px solid var(--subsection-title);
+  }
+
+  .contact-text {
+    margin-left: 4%;
+    border-top: 4px solid var(--subsection-title);
+    width: 50%;
+    padding-top: 3%;
+    font-weight: 400;
+    font-size: 24px;
+    display: flex;
+    justify-content: space-between;
+
+    .contact-details {
+      div {
+        display: flex;
+        flex-direction: column;
+        margin: 1em 0;
+
+        span {
+          &:first-child {
+            color: #f1dec6;
+          }
+          &:last-child {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+    .contact-form {
+      width: 55%;
+
+      form {
+        margin-top: 3%;
+        display: flex;
+        flex-direction: column;
+
+        input,
+        textarea {
+          width: 100%;
+          margin: 1em 0;
+          border-radius: 6px;
+
+          &:focus {
+            outline: none;
+          }
+        }
+
+        input {
+          height: 2em;
+        }
+
+        textarea {
+          height: 10em;
+        }
+
+        button {
+          width: 101%;
+          height: 3em;
+          border-radius: 4px;
+          /* background-color: bisque; */
+          background-color: var(--theme-color);
+          color: bisque;
+          font-weight: bold;
+          border: 1px solid transparent;
+          cursor: pointer;
+
+          &:hover {
+            background-color: #f5e8c7;
+            color: var(--theme-color);
+          }
+        }
+      }
+    }
+  }
+}
+
+/** Responsive css **/
+/* Responsive for 1024px */
+@media screen and (max-width: 1025px) {
+  .start-container {
+    height: 76vh;
+
+    .container-overlay {
+      height: 76vh;
+    }
+
+    .sc-left {
+      .left-name-title {
+        font-size: 34px;
+      }
+      .left-name-description {
+        font-size: 24px;
+
+        span:last-child {
+          font-size: 18px;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}

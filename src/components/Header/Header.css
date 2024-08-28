@@ -1,0 +1,87 @@
+@import "../../assets/common.css";
+@import url("https://fonts.googleapis.com/css2?family=Calligraffitti&display=swap");
+
+header {
+  background-color: var(--theme-color);
+  color: var(--white);
+  height: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  position: fixed;
+  width: 100%;
+  transition: 0.3s ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+
+  .header-left {
+    margin-left: 2em;
+    text-wrap: nowrap;
+    width: fit-content;
+    /* font-family: "Calligraffitti", cursive; */
+    font-family: "Outfit", sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+
+    span {
+      cursor: pointer;
+      color: aliceblue;
+    }
+  }
+
+  .header-right {
+    display: flex;
+    width: fit-content;
+    height: 2em;
+
+    span {
+      text-wrap: nowrap;
+      display: inline-block;
+      position: relative;
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: 400;
+      width: fit-content;
+      margin: 0 3em;
+      cursor: pointer;
+      padding-bottom: 5px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        display: block;
+        width: 0;
+        height: 1px;
+        background-color: var(--name-text);
+        transition: width 0.3s ease;
+        transform: translateX(-50%);
+      }
+
+      &:hover::after {
+        width: 100%;
+      }
+    }
+  }
+  @media screen and (max-width: 1024px) {
+    .header-left {
+      width: 15%;
+    }
+  }
+}
+
+.header-scrolled {
+  height: 60px;
+
+  .header-left {
+    font-size: 20px;
+    width: 40%;
+    transition: 0.3s ease-in-out;
+  }
+  .header-right {
+    span {
+      font-size: 18px;
+    }
+  }
+}

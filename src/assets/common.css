@@ -1,0 +1,12 @@
+:root {
+  --white: #ffffff;
+  --theme-color: #021526;
+  --name-text: #f6f5f5;
+  --name-background: #35374b;
+  --city-name: #fff8f3;
+  --city-name-hover: #758694;
+  /* #102c57; */
+  --about-me-background: #232d3f;
+  --about-me-text: #7c8b97;
+  --subsection-title: #e2e2b6;
+}
