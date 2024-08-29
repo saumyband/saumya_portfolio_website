@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { HEADER_OPTIONS, MY_NAME } from "../../utils/Constants";
-import "./Header.css";
+import { HEADER_OPTIONS } from "../../utils/Constants";
 import { scrollToDiv } from "../../utils/Utils";
+import "./Header.css";
 
 function Header() {
   const [isScrolled, setIsScrolled] = useState(false);

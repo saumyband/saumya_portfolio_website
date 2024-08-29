@@ -7,7 +7,7 @@ export const Home = () => {
 
   useEffect(() => {
     const options = {
-      strings: ["Software Engineer", "Full Stack Developer", "Coder"],
+      strings: ["Programmer", "Full Stack Developer", "Coder"],
       typeSpeed: 50,
       backSpeed: 50,
       backDelay: 1000,

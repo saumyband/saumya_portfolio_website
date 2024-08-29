@@ -4,11 +4,10 @@ import {
   CITY,
   HEADER_OPTIONS,
   MAIL_ID,
-  MY_NAME,
   PHONE_NUMBER,
   PUBLIC_KEY,
   SERVICE_ID,
-  TEMPLATE_ID,
+  TEMPLATE_ID
 } from "../../utils/Constants";
 
 export const Contact = () => {
@@ -70,7 +69,7 @@ export const Contact = () => {
               required
             />
             <textarea
-              placeholder="Your message here..."
+              placeholder="Tell me what are you looking for!"
               value={message}
               id="message"
               name="message"
